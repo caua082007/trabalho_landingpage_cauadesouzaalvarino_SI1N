@@ -1,0 +1,43 @@
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+    margin: 0 auto; padding: 24px clamp(12px, 4vw, 50px) 45px; max-width: 1400px;
+    font-family: 'Courier New', monospace; line-height: 1.7; text-align: center;
+    color: #241521; background: rgb(192, 165, 184);
+}
+img { max-width: 100%; height: auto; object-fit: contain; }
+a { color: #6f2448; }
+body > p:first-child { text-align: left; margin: 0 0 12px; }
+body > img { display: block; width: min(360px, 85%); margin: 0 auto 24px; }
+header { padding: clamp(18px, 3vw, 36px); margin: 24px 0; background: rgb(110, 65, 88); color: #fff4f9; border: 5px solid rgb(59, 27, 54); border-radius: 12px; }
+section, main {
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 18px; width: 100%; margin: 24px auto; padding: clamp(18px, 4vw, 48px);
+    background: rgba(160, 99, 119, .96); border: 6px solid rgb(59, 27, 54); border-radius: 12px;
+}
+section h3, main h3 { max-width: 1100px; font-weight: 500; }
+table { width: 100%; border-collapse: collapse; background: #fff4f9; }
+th, td { padding: 12px 10px; border: 2px solid #5c1a34; }
+section { overflow-x: auto; }
+p { overflow-wrap: anywhere; }
+@media (max-width: 700px) {
+    body { padding: 12px; }
+    header, section, main { padding: 18px 12px; }
+    h1 { font-size: 1.4rem; }
+    h3 { font-size: 1rem; }
+    table { min-width: 650px; }
+}
+
+/* Organização da página de serviços e da tabela de preços */
+section, main { box-shadow: 0 8px 22px rgba(35, 13, 29, .12); }
+section h3, main h3 { text-align: center; line-height: 1.85; }
+section:has(table) { display: block; }
+section:has(table) h1 { margin: 0 0 20px; }
+section table { min-width: 760px; table-layout: fixed; }
+section table th, section table td { overflow-wrap: anywhere; vertical-align: middle; }
+body > p:last-of-type { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 12px; }
+body > p:last-of-type img { width: 76px; vertical-align: middle; }
+@media (max-width: 700px) {
+    section:has(table) { overflow-x: auto; }
+    section table { min-width: 760px; }
+}

@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+    margin: 0 auto;
+    padding: 28px clamp(14px, 4vw, 60px) 50px;
+    max-width: 1500px;
+    font-family: 'Courier New', monospace;
+    background: #241d29 url("img/backhome.png") center top / cover fixed;
+    color: #241521;
+    line-height: 1.7;
+    text-align: center;
+}
+body > img:first-of-type { display: block; width: min(360px, 80%); height: auto; margin: 0 auto 24px; }
+img, video { max-width: 100%; height: auto; }
+img { object-fit: contain; }
+a { color: #6f2448; }
+.icone-menu {
+    display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+    gap: 18px 32px; padding: 24px; margin: 0 auto 28px;
+    background: rgba(126, 80, 104, .95); border: 4px solid #5c1a34; border-radius: 14px;
+}
+.icone-menu a { display: inline-flex; justify-content: center; align-items: center; }
+.icone-menu img { width: clamp(80px, 12vw, 150px); max-height: 150px; object-fit: contain; }
+.icone-menu h3 { width: 100%; margin: -12px 0 0; color: #fff1f7; }
+header {
+    padding: clamp(18px, 3vw, 38px); margin: 24px auto;
+    background: rgba(207, 114, 162, .95); border: 4px solid #5c1a34; border-radius: 12px;
+    text-align: center;
+}
+h1, h2, h3, p { overflow-wrap: anywhere; }
+h1 { line-height: 1.35; }
+h3 { font-size: clamp(1rem, 1.2vw, 1.15rem); font-weight: 500; }
+main { display: flex; flex-direction: column; gap: 24px; padding: 0; }
+.empresa-open, .conhecer, .cultura-arte, .grupo-destaque, .hobbie, .ensino-medio, .uvv-about, .tabela-materia, .plan-f {
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 16px; width: 100%; margin: 24px auto; padding: clamp(18px, 4vw, 48px);
+    border: 5px solid #5c1a34; border-radius: 12px; background: rgba(253, 225, 240, .96);
+}
+.empresa-open h1, .conhecer h1, .cultura-arte h1, .grupo-destaque h1,
+.hobbie h1, .ensino-medio h1, .uvv-about h1, .tabela-materia h1, .plan-f h1 { margin: 0; }
+.grupo-destaque img { width: min(300px, 80%); max-height: 450px; object-fit: cover; border: 4px solid #5c1a34; border-radius: 8px; }
+.cultura-arte img { width: min(363px, 100%); }
+.cultura-arte video { width: min(640px, 100%); height: auto; }
+.hobbie audio { max-width: 100%; }
+.ensino-medio img { width: min(350px, 100%); }
+.uvv-about img { width: min(300px, 100%); margin: 6px; }
+.tabela-materia table { width: min(100%, 900px); border-collapse: collapse; background: #fff8fc; }
+.tabela-materia th, .tabela-materia td { padding: 10px; border: 2px solid #5c1a34; }
+.tabela-materia ul { text-align: left; max-width: 1000px; }
+.plan-f { margin-bottom: 0; }
+@media (min-width: 900px) {
+    .uvv-about { flex-direction: column; }
+    .uvv-about img { display: inline-block; }
+}
+@media (max-width: 600px) {
+    body { padding: 12px 10px 28px; }
+    .icone-menu { gap: 12px; padding: 16px 8px; }
+    header { padding: 18px 12px; }
+    .empresa-open, .conhecer, .cultura-arte, .grupo-destaque, .hobbie, .ensino-medio, .uvv-about, .tabela-materia, .plan-f { padding: 18px 12px; }
+    h1 { font-size: 1.45rem; }
+    h3 { font-size: 1rem; }
+    .tabela-materia { overflow-x: auto; }
+}
+
+/* Acabamento visual: blocos consistentes, leitura confortável e mídia bem posicionada */
+body { width: 100%; }
+.empresa-open h3, .conhecer h3, .cultura-arte h3, .hobbie h3,
+.ensino-medio h3, .uvv-about h3, .plan-f h3 {
+    max-width: 1050px;
+    margin: 0 auto;
+    text-align: center;
+}
+.empresa-open, .conhecer, .cultura-arte, .grupo-destaque, .hobbie,
+.ensino-medio, .uvv-about, .tabela-materia, .plan-f {
+    box-shadow: 0 8px 22px rgba(35, 13, 29, .12);
+}
+.cultura-arte { gap: 20px; }
+.cultura-arte > h3 { display: contents; }
+.cultura-arte img { display: block; margin: 0 auto; border-radius: 10px; }
+.video-destaque {
+    width: min(860px, 100%);
+    margin: 8px auto 0;
+    padding: clamp(8px, 1.5vw, 16px);
+    background: rgba(75, 34, 59, .10);
+    border: 2px solid rgba(92, 26, 52, .35);
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(35, 13, 29, .18);
+}
+.cultura-arte .video-destaque video {
+    display: block;
+    width: 100%;
+    max-height: min(68vh, 520px);
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+    background: #160f17;
+    border-radius: 8px;
+}
+.uvv-about { gap: 20px; }
+.uvv-about img { border: 2px solid rgba(92, 26, 52, .28); border-radius: 8px; }
+.tabela-materia table { border-radius: 8px; overflow: hidden; }
+.tabela-materia li { margin: 8px 0; }
+@media (min-width: 900px) {
+    .icone-menu { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px 24px; }
+    .icone-menu a { min-height: 130px; }
+    .icone-menu h3 { grid-row: 2; margin: 0; }
+}
+@media (max-width: 600px) {
+    .video-destaque { padding: 6px; }
+    .cultura-arte .video-destaque video { aspect-ratio: 16 / 9; }
+}

@@ -1,0 +1,34 @@
+* { box-sizing: border-box; }
+html { min-height: 100%; }
+body {
+    margin: 0; padding: 28px 16px 40px; min-height: 100vh;
+    display: flex; flex-direction: column; align-items: center; justify-content: flex-start; gap: 16px;
+    background-color: #f0e5ec; background-position: center; background-size: cover; background-attachment: fixed;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #1c1118;
+}
+body > a { align-self: flex-start; width: min(100%, 850px); margin: 0 auto; }
+body > a img { width: 80px; height: auto; }
+.form-container {
+    background-color: rgba(242, 214, 230, .97); padding: clamp(20px, 4vw, 36px);
+    border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,.18);
+    width: 100%; max-width: 650px; border: 2px solid #5a3c49;
+}
+.form-container h1 { text-align: center; color: #451b32; margin-bottom: 26px; line-height: 1.3; }
+.form-group { margin-bottom: 20px; }
+label { display: block; margin-bottom: 8px; font-weight: 600; color: #241521; }
+input[type="text"], input[type="tel"], input[type="email"], select, textarea {
+    display: block; width: 100%; padding: 12px; border: 1px solid #b9a5b0; border-radius: 6px;
+    font-size: 15px; background-color: #fff; transition: border-color .2s, box-shadow .2s;
+}
+input:focus, select:focus, textarea:focus { border-color: #b66681; outline: none; box-shadow: 0 0 0 3px rgba(182,102,129,.18); }
+textarea { resize: vertical; min-height: 120px; }
+.opcoes-inline { display: flex; flex-wrap: wrap; gap: 10px 15px; align-items: center; background-color: #fff; padding: 12px; border-radius: 6px; border: 1px solid #ccc; }
+.opcoes-inline input[type="radio"], .opcoes-inline input[type="checkbox"] { transform: scale(1.15); cursor: pointer; }
+.opcoes-inline .label-inline { display: inline; font-weight: normal; margin: 0 12px 0 0; cursor: pointer; color: #333; }
+.btn-enviar { width: 100%; background-color: #7b3156; color: #fff; border: 0; padding: 15px; font-size: 16px; font-weight: bold; border-radius: 6px; cursor: pointer; transition: background-color .2s, transform .1s; margin-top: 10px; }
+.btn-enviar:hover { background-color: #5c1a34; }
+.btn-enviar:active { transform: scale(.99); }
+@media (max-width: 480px) { body { padding: 16px 10px 28px; } .form-container { padding: 20px 14px; } .form-container h1 { font-size: 1.45rem; } }
+.link-voltar { width: min(100%, 650px); display: flex; justify-content: flex-start; margin: 0 auto; }
+.link-voltar img { width: 76px; height: auto; }
+.form-container { box-shadow: 0 12px 30px rgba(30, 10, 23, .24); }
